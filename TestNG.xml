@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="YashTCOEFramework">
+	<parameter name="URL" value="https://www.makemytrip.com/"></parameter>
+	<parameter name="username" value="xyz"></parameter>
+	<parameter name="password" value="xyz"></parameter>
+	<parameter name="Browser_Type" value="Chrome"></parameter>
+	<parameter name="FileName_Excel" value="ReadData.xlsx"></parameter>
+	<parameter name="FilePath" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Resources"></parameter>
+	<parameter name="SheetName" value="FirstSheet"></parameter>
+	<parameter name="FileName_XML" value="SampleXML.xml"></parameter>
+	<parameter name="FilePath_Prop" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Configuration"></parameter>
+	<parameter name="FileName_Prop" value="Configuration.properties"></parameter>
+	<parameter name="FilePath_extent" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\test\java\ExtentReports"></parameter>
+	<parameter name="FileName_extent" value="Reports.html"></parameter>
+	<test name="YashTCOEFramework_Test">
+		<classes>
+			<class name="TestCases.OpenPageTest"></class>
+		</classes>
+	</test>
+</suite>
