@@ -2,6 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [YashTCOEFramework]" guice-stage="DEVELOPMENT">
   <parameter name="FilePath" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Resources"/>
+  <parameter name="password" value="xyz"/>
+  <parameter name="Browser_Type" value="Chrome"/>
   <parameter name="FilePath_Prop" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Configuration"/>
   <parameter name="FileName_extent" value="Reports.html"/>
   <parameter name="FileName_Prop" value="Configuration.properties"/>
@@ -9,14 +11,15 @@
   <parameter name="FileName_Excel" value="ReadData.xlsx"/>
   <parameter name="URL" value="https://www.makemytrip.com/"/>
   <parameter name="FilePath_extent" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\test\java\ExtentReports"/>
+  <parameter name="username" value="xyz"/>
   <parameter name="FileName_XML" value="SampleXML.xml"/>
   <test thread-count="5" name="YashTCOEFramework_Test(failed)">
     <classes>
       <class name="TestCases.OpenPageTest">
         <methods>
           <include name="OpenPage"/>
-          <include name="ReadDataFromExcel" invocation-numbers="0"/>
           <include name="ClosePages"/>
+          <include name="Login" invocation-numbers="0"/>
         </methods>
       </class> <!-- TestCases.OpenPageTest -->
     </classes>

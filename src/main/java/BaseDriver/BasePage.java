@@ -45,14 +45,14 @@ public class BasePage {
 	//Method for setting user name
 	public void SetUserName(String username) {
 		
-		Locator1.sendKeys(username);
+		Locator2.sendKeys(username);
 	}
 	
 	//Method for setting password
 	public void SetPassword(String password) {
 		
-		Locator2.sendKeys(password);
-		Locator2.sendKeys(Keys.ENTER);
+		Locator3.sendKeys(password);
+		Locator3.sendKeys(Keys.ENTER);
 	}
 	
 	public void Login_Page(String username, String password) {

@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -31,7 +31,7 @@ public class OpenPageTest {
 
 	//Selection of browser type to be worked upon
 	@Parameters({"URL","Browser_Type"})
-	@BeforeSuite(enabled = false)
+	@BeforeTest
 	public void OpenPage(String url, String Browser_Type) {
 		
 		if(Browser_Type.equalsIgnoreCase("Chrome")) {
@@ -118,7 +118,7 @@ public class OpenPageTest {
 		WriteXML.WriteXMLData(FilePath, FilePath_Prop, FileName_XML, FileName_Prop);
 	}
 	
-	@AfterSuite(enabled = false)
+	@AfterSuite
 	public void ClosePages() {
 
 		driver.close();
