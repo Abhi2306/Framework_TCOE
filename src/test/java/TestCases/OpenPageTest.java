@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,6 +22,7 @@ import BaseDriver.BasePage;
 import ExtentReports.ExtentReport;
 import excelconfig.ReadExcelData;
 import excelconfig.WriteExcelData;
+import log4j_utility.Log;
 import xmlconfig.ReadXML;
 import xmlconfig.WriteXML;
 
@@ -33,6 +35,9 @@ public class OpenPageTest {
 	@Parameters({"URL","Browser_Type"})
 	@BeforeTest
 	public void OpenPage(String url, String Browser_Type) {
+		
+		DOMConfigurator.configure("log4j.xml");
+		Log.StartTestCase("Test_Case_001");
 		
 		if(Browser_Type.equalsIgnoreCase("Chrome")) {
 			System.setProperty("WebDriver.chrome.driver", "geckodriver.exe");
@@ -79,12 +84,14 @@ public class OpenPageTest {
 				
 				if(entry.getKey().equalsIgnoreCase("FirstRow") && entry.getValue().equalsIgnoreCase("FirstCell_1")) {
 					test.log(LogStatus.PASS, "Data in rows are as expected");
+					Log.Info("Data in rows are as expected");
 					count++;
 					break;
 				}				
 			}
 			if(count!=1) {
 				test.log(LogStatus.FAIL, "Data in rows are NOT as expected");
+				Log.error("Data in rows are NOT as expected");
 			}
 			
 			ExtentReports ext = ExtentReport.extent;
@@ -106,9 +113,11 @@ public class OpenPageTest {
 		if(Output.equalsIgnoreCase("10")) {
 			
 			test.log(LogStatus.PASS, "Output is as expected..!!");
+			Log.Info("Output is as expected..!!");
 		}else {
 			
 			test.log(LogStatus.FAIL, "Output is not as expected..!!");
+			Log.Info("Output is NOT as expected..!!");
 		}
 		
 		ExtentReports ext = ExtentReport.extent;
@@ -122,7 +131,9 @@ public class OpenPageTest {
 	public void ClosePages() {
 
 		driver.close();
+		Log.Info("Browser Closed");
 		driver.quit();
+		Log.EndTestCase("Test_Case_001");
 	}
 
 }

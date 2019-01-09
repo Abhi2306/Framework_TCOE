@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [YashTCOEFramework]" guice-stage="DEVELOPMENT">
-  <parameter name="FilePath" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Resources"/>
-  <parameter name="password" value="xyz"/>
+  <parameter name="FilePath" value="src\main\java\Resources"/>
+  <parameter name="password" value="abcdxyz"/>
   <parameter name="Browser_Type" value="Chrome"/>
-  <parameter name="FilePath_Prop" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Configuration"/>
+  <parameter name="FilePath_Prop" value="src\main\java\Configuration"/>
   <parameter name="FileName_extent" value="Reports.html"/>
   <parameter name="FileName_Prop" value="Configuration.properties"/>
   <parameter name="SheetName" value="FirstSheet"/>
   <parameter name="FileName_Excel" value="ReadData.xlsx"/>
   <parameter name="URL" value="https://www.makemytrip.com/"/>
-  <parameter name="FilePath_extent" value="C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\test\java\ExtentReports"/>
-  <parameter name="username" value="xyz"/>
+  <parameter name="FilePath_extent" value="src\test\java\ExtentReports"/>
+  <parameter name="username" value="abcdxyz"/>
   <parameter name="FileName_XML" value="SampleXML.xml"/>
   <test thread-count="5" name="YashTCOEFramework_Test(failed)">
     <classes>

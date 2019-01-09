@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-01-09T05:49:47Z" name="YashTCOEFramework" finished-at="2019-01-09T05:50:14Z" duration-ms="27327">
+  <suite started-at="2019-01-09T09:47:53Z" name="YashTCOEFramework" finished-at="2019-01-09T09:48:22Z" duration-ms="29405">
     <groups>
     </groups>
-    <test started-at="2019-01-09T05:49:47Z" name="YashTCOEFramework_Test" finished-at="2019-01-09T05:50:14Z" duration-ms="27327">
+    <test started-at="2019-01-09T09:47:53Z" name="YashTCOEFramework_Test" finished-at="2019-01-09T09:48:22Z" duration-ms="29405">
       <class name="TestCases.OpenPageTest">
-        <test-method is-config="true" signature="OpenPage(java.lang.String, java.lang.String)[pri:0, instance:TestCases.OpenPageTest@120f102b]" started-at="2019-01-09T05:49:47Z" name="OpenPage" finished-at="2019-01-09T05:50:07Z" duration-ms="20034" status="PASS">
+        <test-method is-config="true" signature="OpenPage(java.lang.String, java.lang.String)[pri:0, instance:TestCases.OpenPageTest@51dcb805]" started-at="2019-01-09T09:47:53Z" name="OpenPage" finished-at="2019-01-09T09:48:09Z" duration-ms="16486" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,27 +23,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method signature="Login(java.lang.String, java.lang.String)[pri:1, instance:TestCases.OpenPageTest@120f102b]" started-at="2019-01-09T05:50:07Z" name="Login" finished-at="2019-01-09T05:50:10Z" duration-ms="3184" status="PASS">
+        <test-method signature="Login(java.lang.String, java.lang.String)[pri:1, instance:TestCases.OpenPageTest@51dcb805]" started-at="2019-01-09T09:48:09Z" name="Login" finished-at="2019-01-09T09:48:15Z" duration-ms="6016" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[xyz]]>
+                <![CDATA[abhii.khatod@gmail.com]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[xyz]]>
+                <![CDATA[abcdxyz]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="ReadDataFromExcel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:TestCases.OpenPageTest@120f102b]" started-at="2019-01-09T05:50:10Z" name="ReadDataFromExcel" finished-at="2019-01-09T05:50:13Z" duration-ms="3500" status="PASS">
+        <test-method signature="ReadDataFromExcel(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:TestCases.OpenPageTest@51dcb805]" started-at="2019-01-09T09:48:15Z" name="ReadDataFromExcel" finished-at="2019-01-09T09:48:22Z" duration-ms="6519" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Resources]]>
+                <![CDATA[src\main\java\Resources]]>
               </value>
             </param>
             <param index="1">
@@ -58,7 +58,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\test\java\ExtentReports]]>
+                <![CDATA[src\test\java\ExtentReports]]>
               </value>
             </param>
             <param index="4">
@@ -70,11 +70,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReadDataFromExcel -->
-        <test-method signature="ReadDataFromXML(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:TestCases.OpenPageTest@120f102b]" started-at="2019-01-09T05:50:13Z" name="ReadDataFromXML" finished-at="2019-01-09T05:50:14Z" duration-ms="588" status="PASS">
+        <test-method signature="ReadDataFromXML(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:TestCases.OpenPageTest@51dcb805]" started-at="2019-01-09T09:48:22Z" name="ReadDataFromXML" finished-at="2019-01-09T09:48:22Z" duration-ms="359" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Resources]]>
+                <![CDATA[src\main\java\Resources]]>
               </value>
             </param>
             <param index="1">
@@ -89,12 +89,12 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\main\java\Configuration]]>
+                <![CDATA[src\main\java\Configuration]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[C:\Users\abhishek.khatod\Documents\eclipse_workspace\yash.TCOEFrameWork\src\test\java\ExtentReports]]>
+                <![CDATA[src\test\java\ExtentReports]]>
               </value>
             </param>
             <param index="5">
@@ -106,7 +106,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReadDataFromXML -->
-        <test-method is-config="true" signature="ClosePages()[pri:0, instance:TestCases.OpenPageTest@120f102b]" started-at="2019-01-09T05:50:14Z" name="ClosePages" finished-at="2019-01-09T05:50:15Z" duration-ms="925" status="PASS">
+        <test-method is-config="true" signature="ClosePages()[pri:0, instance:TestCases.OpenPageTest@51dcb805]" started-at="2019-01-09T09:48:22Z" name="ClosePages" finished-at="2019-01-09T09:48:23Z" duration-ms="1125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ClosePages -->

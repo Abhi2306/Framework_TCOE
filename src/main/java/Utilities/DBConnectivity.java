@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+
+import log4j_utility.Log;
 import xmlconfig.ReadXML;
 
 public class DBConnectivity {
@@ -33,12 +35,18 @@ public class DBConnectivity {
 		
 		//Choosing MySql or Oracle
 		if (Connection_Choice.equalsIgnoreCase("mysql")) {
+			
 			Class.forName("com.mysql.jdbc.driver");
+			Log.Info("MYSQL is used for setting up DB connection..!!");
 		} else if (Connection_Choice.equalsIgnoreCase("Oracle")) {
+			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
+			Log.Info("ORACLE is used for setting up DB connection..!!");
 		} else {
 			System.out.println(
 					"Apologies for the inconvenience..!! Please choose either SQL or Oracle connectivty for DB connections..!!");
+			
+			Log.error("Choose either MYSQL or ORACLE for DB set up");
 		}
 
 		Statement stmt = con.createStatement();
@@ -48,6 +56,7 @@ public class DBConnectivity {
 		
 		//Using Result set meta data class so that count of column and column name can be retrieved
 		ResultSetMetaData rsmd = result.getMetaData();
+		Log.Info("To collect number of columns, name of columns fetched by the query");
 		
 		//Column count of the result
 		int column_count = rsmd.getColumnCount();
@@ -73,6 +82,8 @@ public class DBConnectivity {
 		}
 
 		con.close();
+		
+		Log.Warn("Closing the connection..!!");
 		return queryResult;
 	}
 }

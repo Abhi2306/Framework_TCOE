@@ -5,6 +5,8 @@ import java.io.File;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+import log4j_utility.Log;
+
 public class ExtentReport {
 
 	public static ExtentReports extent;
@@ -13,6 +15,8 @@ public class ExtentReport {
 		
 		//Giving file location for storing the results in report
 		extent = new ExtentReports(System.getProperty("user.dir")+"\\"+FilePath_extent+"\\"+FileName_extent,false);
+		
+		Log.Info("Extent reports are generating..!!");
 		
 		//Addition info for the reports
 		extent.addSystemInfo("Host Name", "Abhishek");
@@ -24,6 +28,7 @@ public class ExtentReport {
 		
 		//instance of ExtentTest for starting the test
 		ExtentTest test = extent.startTest("Start test");
+		Log.Info("Test is started..!!");
 		
 		return test;
 	}
@@ -34,5 +39,7 @@ public class ExtentReport {
 		extent_1.endTest(test_1);
 		extent_1.flush();
 		extent_1.close();
+		
+		Log.Info("Report is completely generated..!!");
 	}
 }

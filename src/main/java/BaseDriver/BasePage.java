@@ -1,6 +1,7 @@
 package BaseDriver;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -11,6 +12,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import log4j_utility.Log;
+
 public class BasePage {
 	
 	WebDriver driver;
@@ -18,10 +21,10 @@ public class BasePage {
 	@FindBy(id="ch_login_icon")
 	WebElement Locator1; 
 	
-	@FindBy(id="ch_login_email")
+	@FindBy(css="input[id='ch_login_email']")
 	WebElement Locator2;
 	
-	@FindBy(id="ch_login_password")
+	@FindBy(css="input[id='ch_login_password']")
 	WebElement Locator3;
 	
 	@FindBy(css="")
@@ -41,25 +44,34 @@ public class BasePage {
 	public void ClickLogin() {
 		
 		Locator1.click();
+		System.out.println("Locator1");
 	}
 	//Method for setting user name
 	public void SetUserName(String username) {
 		
 		Locator2.sendKeys(username);
+		System.out.println("Locator2");
 	}
 	
 	//Method for setting password
 	public void SetPassword(String password) {
 		
 		Locator3.sendKeys(password);
+		System.out.println("Locator3");
 		Locator3.sendKeys(Keys.ENTER);
 	}
 	
 	public void Login_Page(String username, String password) {
 		
 		this.ClickLogin();
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		this.SetUserName(username);
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		this.SetPassword(password);
+		
+		Log.Info("Clicked on login button and entered username & password..!!");
 	}
 	
 	//Method for using Select on a WebElement

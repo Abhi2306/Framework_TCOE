@@ -3,8 +3,8 @@
 
 <suite name="YashTCOEFramework">
 	<parameter name="URL" value="https://www.makemytrip.com/"></parameter>
-	<parameter name="username" value="xyz"></parameter>
-	<parameter name="password" value="xyz"></parameter>
+	<parameter name="username" value="abcdxyz"></parameter>
+	<parameter name="password" value="abcdxyz"></parameter>
 	<parameter name="Browser_Type" value="Chrome"></parameter>
 	<parameter name="FileName_Excel" value="ReadData.xlsx"></parameter>
 	<parameter name="FilePath" value="src\main\java\Resources"></parameter>

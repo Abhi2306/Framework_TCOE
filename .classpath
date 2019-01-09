@@ -56,7 +56,8 @@
 	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Downloads/Selenium/extentreports-java-2.41.2/extentreports-java-2.41.2/lib/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Downloads/Selenium/extentreports-java-2.41.2/extentreports-java-2.41.2/lib/testng-6.9.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Downloads/Selenium/selenium-support-2.4.0-sources.jar/selenium-support-2.4.0-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Documents/eclipse_workspace/TCOE_Utility_XML/XMLconfig.jar"/>
+	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Documents/eclipse_workspace/TCOE_Utility_XML/XMLConfig.jar"/>
 	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Documents/eclipse_workspace/TCOE_Utility_Excel/ExcelConfig.jar"/>
+	<classpathentry kind="lib" path="C:/Users/abhishek.khatod/Documents/eclipse_workspace/TCOE_log4j_Utility/Log4jConfig.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
