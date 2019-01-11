@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Properties;
 
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -23,110 +24,96 @@ import ExtentReports.ExtentReport;
 import excelconfig.ReadExcelData;
 import excelconfig.WriteExcelData;
 import log4j_utility.Log;
-import xmlconfig.ReadXML;
-import xmlconfig.WriteXML;
 
 public class OpenPageTest {
 
-	static WebDriver driver;
+	WebDriver driver;
 	BasePage base;
+	Properties prop;
 
-	//Selection of browser type to be worked upon
-	@Parameters({"URL","Browser_Type"})
-	@BeforeTest
+	// Selection of browser type to be worked upon
+	//@Parameters({ "URL", "Browser_Type" })
+	//@BeforeTest
 	public void OpenPage(String url, String Browser_Type) {
-		
+
 		DOMConfigurator.configure("log4j.xml");
 		Log.StartTestCase("Test_Case_001");
-		
-		if(Browser_Type.equalsIgnoreCase("Chrome")) {
+
+		if (Browser_Type.equalsIgnoreCase("Chrome")) {
 			System.setProperty("WebDriver.chrome.driver", "geckodriver.exe");
 			driver = new ChromeDriver();
-			
-		}else if(Browser_Type.equalsIgnoreCase("FireFox")) {
+
+		} else if (Browser_Type.equalsIgnoreCase("FireFox")) {
 			System.setProperty("WebDriver.firefox.marionette", "chromedriver.exe");
-			driver = new FirefoxDriver();	
-			
-		}else if(Browser_Type.equalsIgnoreCase("InternetExplorer")) {
+			driver = new FirefoxDriver();
+
+		} else if (Browser_Type.equalsIgnoreCase("InternetExplorer")) {
 			System.setProperty("WebDriver.ie.driver", "IEDriverServer.exe");
 			driver = new FirefoxDriver();
-			
-		}else {
-			System.out.println("Other browsers are not yet supported by the system..!! Please choose either of Chrome, FireFox or IE");
-		}
-		
-		driver.get(url);
 
-		driver.manage().window().maximize();
+		} else {
+			System.out.println(
+					"Other browsers are not yet supported by the system..!! Please choose either of Chrome, FireFox or IE");
+		}
+
+		//driver.get(url);
+
+		//driver.manage().window().maximize();
 	}
-	
-	@Parameters({ "username", "password"})
-	@Test(enabled=true, priority=1)
+
+	@Parameters({ "username", "password" })
+	@Test(enabled = false, priority = 1)
 	public void Login(String username, String password) {
-		
+
 		base = new BasePage(driver);
 		base.Login_Page(username, password);
 	}
 
 	@Parameters({ "FilePath", "FileName_Excel", "SheetName", "FilePath_extent", "FileName_extent" })
-	@Test(enabled = true, priority=2)
-	public void ReadDataFromExcel(String FilePath, String FileName, String SheetName, String FilePath_extent, String FileName_extent) throws IOException {
+	@Test(enabled = true, priority = 2)
+	public void ReadDataFromExcel(String FilePath, String FileName, String SheetName, String FilePath_extent,
+			String FileName_extent) throws IOException {
 
-			Map<String, String> DataFromExcel = new HashMap<String, String>();
-			
-			DataFromExcel = ReadExcelData.ReadExcel(FilePath, FileName, SheetName);
-			
-			ExtentTest test = ExtentReport.ExtentRep(FilePath_extent, FileName_extent);
-			
-			int count=0;
-			
-			for(Entry<String, String> entry : DataFromExcel.entrySet()) {
-				
-				if(entry.getKey().equalsIgnoreCase("FirstRow") && entry.getValue().equalsIgnoreCase("FirstCell_1")) {
-					test.log(LogStatus.PASS, "Data in rows are as expected");
-					Log.Info("Data in rows are as expected");
-					count++;
-					break;
-				}				
-			}
-			if(count!=1) {
-				test.log(LogStatus.FAIL, "Data in rows are NOT as expected");
-				Log.error("Data in rows are NOT as expected");
-			}
-			
-			ExtentReports ext = ExtentReport.extent;
-			
-			ExtentReport.AfterMethod(ext, test);
+		DOMConfigurator.configure("log4j.xml");
+		Log.StartTestCase("Test_Case_001");
 		
-			WriteExcelData.WriteExcel(FilePath, FileName, SheetName);
-	}
+		Map<String, String> DataFromExcel = new HashMap<String, String>();
 
-	@Parameters({ "FilePath", "FileName_XML", "FileName_Prop", "FilePath_Prop", "FilePath_extent", "FileName_extent"})
-	@Test(enabled = true, priority=3)
-	public void ReadDataFromXML(String FilePath, String FileName_XML, String FileName_Prop, String FilePath_Prop,
-			String FilePath_extent, String FileName_extent) throws Exception {
-		
-		ExtentTest test = ExtentReport.ExtentRep(FilePath_extent, FileName_extent);
+		DataFromExcel = ReadExcelData.ReadExcel(FilePath, FileName, SheetName);
 
-		String Output = ReadXML.ReadXMLData(FilePath, FilePath_Prop, FileName_XML, FileName_Prop);
+		String TestName = "Read Excel Test";
+		ExtentTest test = ExtentReport.ExtentRep(FilePath_extent, FileName_extent, TestName);
 
-		if(Output.equalsIgnoreCase("10")) {
-			
-			test.log(LogStatus.PASS, "Output is as expected..!!");
-			Log.Info("Output is as expected..!!");
-		}else {
-			
-			test.log(LogStatus.FAIL, "Output is not as expected..!!");
-			Log.Info("Output is NOT as expected..!!");
+		int count = 0;
+
+		for (Entry<String, String> entry : DataFromExcel.entrySet()) {
+
+			if (entry.getValue().equalsIgnoreCase("Khatod")) {
+				test.log(LogStatus.PASS, "Data in rows are as expected");
+				Log.Info("Data in rows are as expected");
+				count++;
+				break;
+			}
 		}
-		
+		if (count != 1) {
+			test.log(LogStatus.FAIL, "Data in rows are NOT as expected");
+			Log.error("Data in rows are NOT as expected");
+		}
+
 		ExtentReports ext = ExtentReport.extent;
-		
-		ExtentReport.AfterMethod(ext, test);
-		
-		WriteXML.WriteXMLData(FilePath, FilePath_Prop, FileName_XML, FileName_Prop);
+
+		ExtentReport.AfterMethod(ext, test, TestName);
 	}
-	
+
+	@Parameters({ "FilePath", "FileName_Excel", "SheetName", "FilePath_extent", "FileName_extent" })
+	@Test(enabled = true, priority = 3)
+	public void WriteData(String FilePath, String FileName, String SheetName, String FilePath_extent,
+			String FileName_extent) throws IOException {
+
+		WriteExcelData.WriteExcel(FilePath, FileName, SheetName);
+
+	}
+
 	@AfterSuite
 	public void ClosePages() {
 

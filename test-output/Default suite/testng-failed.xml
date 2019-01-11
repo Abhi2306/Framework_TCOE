@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="yash.TCOEFrameWork_Test.OpenPageTest">
+      <class name="TestCases.XMLTestCase">
         <methods>
-          <include name="ReadDataFromExcel"/>
+          <include name="WriteDataXML"/>
+          <include name="InitializeLog4j"/>
+          <include name="ReadDataXML"/>
         </methods>
-      </class> <!-- yash.TCOEFrameWork_Test.OpenPageTest -->
+      </class> <!-- TestCases.XMLTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

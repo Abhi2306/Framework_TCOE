@@ -10,13 +10,25 @@
 	<parameter name="FilePath" value="src\main\java\Resources"></parameter>
 	<parameter name="SheetName" value="FirstSheet"></parameter>
 	<parameter name="FileName_XML" value="SampleXML.xml"></parameter>
-	<parameter name="FilePath_Prop" value="src\main\java\Configuration"></parameter>
-	<parameter name="FileName_Prop" value="Configuration.properties"></parameter>
-	<parameter name="FilePath_extent" value="src\test\java\ExtentReports"></parameter>
+	<parameter name="FilePath_Prop"
+		value="src\main\java\Configuration"></parameter>
+	<parameter name="FileName_Prop"
+		value="Configuration.properties"></parameter>
+	<parameter name="FilePath_extent"
+		value="src\test\java\ExtentReports"></parameter>
 	<parameter name="FileName_extent" value="Reports.html"></parameter>
+	<parameter name="FileName_extent_XML"
+		value="Extent_Config.xml"></parameter>
+	<parameter name="Search_Tag_Name" value="discount"></parameter>
 	<test name="YashTCOEFramework_Test">
 		<classes>
-			<class name="TestCases.OpenPageTest"></class>
+			<class name="TestCases.OpenPageTest">
+				<!-- <methods>
+					<include name="ReadExcel"></include>
+					<include name="WriteExcel"></include>
+				</methods> -->
+			</class>
+			<!--<class name="TestCases.XMLTestCase"></class> -->
 		</classes>
 	</test>
 </suite>

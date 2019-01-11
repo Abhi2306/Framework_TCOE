@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,17 +102,12 @@
                     <div class="method-list-content passed suite-YashTCOEFramework">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-YashTCOEFramework" title="TestCases.OpenPageTest" class="method navigator-link" hash-for-method="Login(abhii.khatod@gmail.com, abcdxyz)">Login(abhii.khatod@gmail.com, abcdxyz)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-YashTCOEFramework" title="TestCases.OpenPageTest" class="method navigator-link" hash-for-method="ReadDataFromExcel(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)">ReadDataFromExcel(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-YashTCOEFramework" title="TestCases.OpenPageTest" class="method navigator-link" hash-for-method="ReadDataFromXML(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\t...)">ReadDataFromXML(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\t...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-YashTCOEFramework" title="TestCases.OpenPageTest" class="method navigator-link" hash-for-method="WriteData(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)">WriteData(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-YashTCOEFramework -->
@@ -135,14 +130,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Login(abhii.khatod@gmail.com, abcdxyz)">
-                  </a> <!-- Login(abhii.khatod@gmail.com, abcdxyz) -->
-                  <span class="method-name">Login</span>
-                  <span class="parameters">(abhii.khatod@gmail.com, abcdxyz)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="ReadDataFromExcel(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)">
                   </a> <!-- ReadDataFromExcel(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html) -->
                   <span class="method-name">ReadDataFromExcel</span>
@@ -151,10 +138,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="ReadDataFromXML(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\t...)">
-                  </a> <!-- ReadDataFromXML(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\t...) -->
-                  <span class="method-name">ReadDataFromXML</span>
-                  <span class="parameters">(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\test\java\ExtentReports, Reports.html)</span>
+                  <a name="WriteData(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)">
+                  </a> <!-- WriteData(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html) -->
+                  <span class="method-name">WriteData</span>
+                  <span class="parameters">(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -170,7 +157,6 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;YashTCOEFramework&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;FilePath&quot; value=&quot;src\main\java\Resources&quot;/&gt;
-  &lt;parameter name=&quot;password&quot; value=&quot;abcdxyz&quot;/&gt;
   &lt;parameter name=&quot;Browser_Type&quot; value=&quot;Chrome&quot;/&gt;
   &lt;parameter name=&quot;FilePath_Prop&quot; value=&quot;src\main\java\Configuration&quot;/&gt;
   &lt;parameter name=&quot;FileName_extent&quot; value=&quot;Reports.html&quot;/&gt;
@@ -178,9 +164,12 @@
   &lt;parameter name=&quot;SheetName&quot; value=&quot;FirstSheet&quot;/&gt;
   &lt;parameter name=&quot;FileName_Excel&quot; value=&quot;ReadData.xlsx&quot;/&gt;
   &lt;parameter name=&quot;URL&quot; value=&quot;https://www.makemytrip.com/&quot;/&gt;
-  &lt;parameter name=&quot;FilePath_extent&quot; value=&quot;src\test\java\ExtentReports&quot;/&gt;
-  &lt;parameter name=&quot;username&quot; value=&quot;abhii.khatod@gmail.com&quot;/&gt;
+  &lt;parameter name=&quot;FileName_extent_XML&quot; value=&quot;Extent_Config.xml&quot;/&gt;
   &lt;parameter name=&quot;FileName_XML&quot; value=&quot;SampleXML.xml&quot;/&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;abcdxyz&quot;/&gt;
+  &lt;parameter name=&quot;Search_Tag_Name&quot; value=&quot;discount&quot;/&gt;
+  &lt;parameter name=&quot;FilePath_extent&quot; value=&quot;src\test\java\ExtentReports&quot;/&gt;
+  &lt;parameter name=&quot;username&quot; value=&quot;abcdxyz&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;YashTCOEFramework_Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;TestCases.OpenPageTest&quot;/&gt;
@@ -223,24 +212,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ReadDataFromExcel')
 data.setCell(0, 2, 'TestCases.OpenPageTest')
-data.setCell(0, 3, 6519);
+data.setCell(0, 3, 785);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Login')
+data.setCell(1, 1, 'WriteData')
 data.setCell(1, 2, 'TestCases.OpenPageTest')
-data.setCell(1, 3, 6016);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'ReadDataFromXML')
-data.setCell(2, 2, 'TestCases.OpenPageTest')
-data.setCell(2, 3, 359);
+data.setCell(1, 3, 163);
 window.suiteTableData['YashTCOEFramework']= { tableData: data, tableDiv: 'times-div-YashTCOEFramework'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 948 ms</span>
               <div id="times-div-YashTCOEFramework">
               </div> <!-- times-div-YashTCOEFramework -->
             </div> <!-- times-div -->
@@ -255,9 +240,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-YashTCOEFramework" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestCases.OpenPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Login</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-YashTCOEFramework" class="panel">
@@ -267,25 +259,19 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">TestCases.OpenPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">OpenPage(https://www.makemytrip.com/, Chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">Login(abhii.khatod@gmail.com, abcdxyz)</span>
-                <span class="method-start">16497 ms</span>
-              </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">ReadDataFromExcel(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)</span>
-                <span class="method-start">22517 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">ReadDataFromXML(src\main\java\Resources, SampleXML.xml, Configuration.properties, src\main\java\Configuration, src\t...)</span>
-                <span class="method-start">29046 ms</span>
+                <span class="method-name">WriteData(src\main\java\Resources, ReadData.xlsx, FirstSheet, src\test\java\ExtentReports, Reports.html)</span>
+                <span class="method-start">785 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">ClosePages</span>
-                <span class="method-start">29452 ms</span>
+                <span class="method-start">978 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

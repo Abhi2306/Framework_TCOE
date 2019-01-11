@@ -44,20 +44,17 @@ public class BasePage {
 	public void ClickLogin() {
 		
 		Locator1.click();
-		System.out.println("Locator1");
 	}
 	//Method for setting user name
 	public void SetUserName(String username) {
 		
 		Locator2.sendKeys(username);
-		System.out.println("Locator2");
 	}
 	
 	//Method for setting password
 	public void SetPassword(String password) {
 		
 		Locator3.sendKeys(password);
-		System.out.println("Locator3");
 		Locator3.sendKeys(Keys.ENTER);
 	}
 	
